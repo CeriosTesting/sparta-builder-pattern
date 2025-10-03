@@ -271,7 +271,7 @@ The if statement is a check if a user is using this method correct. Would not ma
 
 Now it does not make a difference if we run this test tomorrow or anytime in the future. The person always has the same age. Future proof Test automation!
 
-## 8. Be the Director of you Builders
+## 8. Be the Director of your Builders
 We need to do some kind of load test and need to create a big message with around 10.000 unique persons. Good luck doing this manually, OK nowadays we have AI, but let's do it in a controlled way.
 
 - Create a new folder `directors`
