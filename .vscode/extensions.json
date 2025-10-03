@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"ms-playwright.playwright",
+		"vscode-icons-team.vscode-icons",
+		"YoavBls.pretty-ts-errors",
+		"christian-kohler.npm-intellisense",
+		"biomejs.biome"
+	]
+}

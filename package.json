@@ -1,0 +1,23 @@
+{
+	"name": "sparta-builders",
+	"version": "1.0.0",
+	"description": "Sparta builders workshop",
+	"main": "index.js",
+	"keywords": [],
+	"author": "Ronald Veth - Cerios",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "2.2.4",
+		"@faker-js/faker": "^10.0.0",
+		"@playwright/test": "^1.55.1",
+		"@types/node": "^24.6.0",
+		"date-fns": "^4.1.0",
+		"typescript": "^5.9.3"
+	},
+	"scripts": {
+		"test": "npx playwright test",
+		"build": "tsc",
+		"lint": "biome lint",
+		"check": "biome check --write"
+	}
+}
