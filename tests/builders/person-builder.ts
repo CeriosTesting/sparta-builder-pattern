@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import { addDays, addMonths, addYears } from "date-fns";
 import { AddressBuilder } from "tests/builders/address-builder";
 import { ContactBuilder } from "tests/builders/contact-builder";
 import { Gender } from "tests/enums/gender";
@@ -19,24 +20,26 @@ export class PersonBuilder {
 		const gender = faker.helpers.enumValue(Gender);
 		const sexType = gender === Gender.Male ? "male" : "female";
 
-		return PersonBuilder.create()
-			.uuid(faker.string.uuid())
-			.firstName(faker.person.firstName(sexType))
-			.lastName(faker.person.lastName(sexType))
-			.gender(gender)
-			.dateOfBirth(faker.date.birthdate())
-			.isActive(faker.datatype.boolean())
-			.address(AddressBuilder.createWithDefaults().build())
-			.contacts([
-				ContactBuilder.createWithDefaults().build(),
-				ContactBuilder.createWithDefaults().build(),
-				ContactBuilder.createWithDefaults().build(),
-			])
-			.hobbies([
-				faker.helpers.arrayElement(["Reading", "Gaming", "Sports", "Music", "Cooking", "Travel"]),
-				faker.helpers.arrayElement(["Photography", "Dancing", "Art", "Fitness", "Movies"]),
-			])
-			.notes(`${faker.person.jobTitle()} who loves ${faker.word.verb()}ing`);
+		return (
+			PersonBuilder.create()
+				.uuid(faker.string.uuid())
+				.firstName(faker.person.firstName(sexType))
+				.lastName(faker.person.lastName(sexType))
+				.gender(gender)
+				.dateOfBirth(faker.date.birthdate())
+				.isActive(faker.datatype.boolean())
+				.address(AddressBuilder.createWithDefaults().build())
+				// .contacts([
+				// 	ContactBuilder.createWithDefaults().build(),
+				// 	ContactBuilder.createWithDefaults().build(),
+				// 	ContactBuilder.createWithDefaults().build(),
+				// ])
+				.hobbies([
+					faker.helpers.arrayElement(["Reading", "Gaming", "Sports", "Music", "Cooking", "Travel"]),
+					faker.helpers.arrayElement(["Photography", "Dancing", "Art", "Fitness", "Movies"]),
+				])
+				.notes(`${faker.person.jobTitle()} who loves ${faker.word.verb()}ing`)
+		);
 	}
 
 	uuid(uuid: string): PersonBuilder {
@@ -64,6 +67,21 @@ export class PersonBuilder {
 		return this;
 	}
 
+	withDateOfBirthInPast(options: { yearsInPast?: number; monthsInPast?: number; daysInPast?: number }): PersonBuilder {
+		// Safety check: at least one time unit must be provided
+		if (!options.yearsInPast && !options.monthsInPast && !options.daysInPast) {
+			throw new Error("At least one of years, months or days must be provided");
+		}
+
+		// Start with today's date and work backwards
+		let dateInPast = addYears(new Date(), -(options.yearsInPast ?? 0));
+		dateInPast = addMonths(dateInPast, -(options.monthsInPast ?? 0));
+		dateInPast = addDays(dateInPast, -(options.daysInPast ?? 0));
+
+		this.person.dateOfBirth = dateInPast;
+		return this;
+	}
+
 	isActive(isActive: boolean): PersonBuilder {
 		this.person.isActive = isActive;
 		return this;
@@ -76,6 +94,15 @@ export class PersonBuilder {
 
 	contacts(contacts: Contact[]): PersonBuilder {
 		this.person.contacts = contacts;
+		return this;
+	}
+
+	withRandomContacts(amount: number): PersonBuilder {
+		const randomContacts: Contact[] = [];
+		for (let i = 0; i < amount; i++) {
+			randomContacts.push(ContactBuilder.createWithDefaults().build());
+		}
+		this.person.contacts = randomContacts;
 		return this;
 	}
 
