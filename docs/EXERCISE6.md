@@ -14,6 +14,7 @@ contacts?: Contact[];
 
 ```typescript
 import { faker } from "@faker-js/faker";
+import { Address } from "tests/models/address";
 import { Person } from "tests/models/person";
 import { Gender } from "tests/enums/gender";
 import { AddressBuilder } from "tests/builders/address-builder";
