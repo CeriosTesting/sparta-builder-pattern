@@ -13,10 +13,10 @@ export class AddressBuilder {
 	static createWithDefaults(): AddressBuilder {
 		return AddressBuilder.create()
 			.countryCode(faker.location.countryCode("alpha-2"))
-			.street(faker.location.street())
-			.houseNumber(faker.number.int({ min: 1, max: 1000 }))
-			.city(faker.location.city())
-			.postalCode(faker.location.zipCode("#### ??"));
+			.street(`${faker.animal.type()} Street`)
+			.houseNumber(faker.number.int({ min: 1, max: 42 }))
+			.city(`${faker.color.human()} ${faker.location.city()}`)
+			.postalCode(faker.location.zipCode("####??"));
 	}
 
 	street(street: string): AddressBuilder {
