@@ -1,5 +1,6 @@
 import { Gender } from "tests/enums/gender";
 import { Address } from "tests/models/address";
+import { Contact } from "tests/models/contact";
 
 export type Person = {
 	uuid: string;
@@ -9,6 +10,7 @@ export type Person = {
 	dateOfBirth: Date;
 	isActive: boolean;
 	address: Address;
+	contacts?: Contact[];
 	hobbies?: string[];
 	notes?: string;
 };
