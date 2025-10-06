@@ -53,4 +53,4 @@ You've just learned how to:
 
 This skill is fundamental to building robust, type-safe test frameworks!
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go to the next exercise](./EXERCISE3.md)

@@ -98,4 +98,4 @@ Add a test to check this custom builder method is working, you should not use `.
 
 **You're now thinking like a professional developer!**
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go to the next exercise](./EXERCISE8.md)

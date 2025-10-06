@@ -91,4 +91,4 @@ Add a test to check this custom builder method is working, you should not use `.
 
 **You're now a time-travel testing wizard!**
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go to the next exercise](./EXERCISE9.md)

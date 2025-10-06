@@ -14,4 +14,4 @@ Run this test multiple times. What do you see?
 ### create Address with builder and defaults but force the house number
 Also run this test multiple times. What is different from the previous one?
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go to the next exercise](./EXERCISE4.md)

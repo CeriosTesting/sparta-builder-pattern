@@ -14,6 +14,7 @@ contacts?: Contact[];
 
 ```typescript
 import { faker } from "@faker-js/faker";
+import { Address } from "tests/models/address";
 import { Person } from "tests/models/person";
 import { Gender } from "tests/enums/gender";
 import { AddressBuilder } from "tests/builders/address-builder";
@@ -135,4 +136,4 @@ Do you see the default of 3 random contacts?
 - ✅ **Mastered array manipulation** for dynamic contact generation
 - ✅ **Demonstrated fluent interface design** with method chaining
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go to the next exercise](./EXERCISE7.md)

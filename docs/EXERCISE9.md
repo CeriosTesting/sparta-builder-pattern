@@ -161,4 +161,4 @@ You can now:
 
 **You're now ready to tackle enterprise-level data challenges!**
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go back to Home](../README.md)

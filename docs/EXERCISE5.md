@@ -72,4 +72,4 @@ Create tests that demonstrate your builder works
 Do you want a nice explanation about how the builder pattern works?
 Read the [BuilderExplanation](../docs/BUILDER_EXPLANATION.md)
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go to the next exercise](./EXERCISE6.md)
