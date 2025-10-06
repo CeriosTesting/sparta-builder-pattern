@@ -2,7 +2,7 @@ import { test } from "@playwright/test";
 import { Gender } from "tests/enums/gender";
 import { Person } from "tests/models/person";
 
-test("Person A", async () => {
+test("Person typed", async () => {
 	const person: Person = {
 		uuid: "123e4567-e89b-12d3-a456-426614174000",
 		firstName: "Logan",
@@ -19,5 +19,5 @@ test("Person A", async () => {
 		},
 	};
 
-	console.log(person);
+	console.log(JSON.stringify(person, null, 2));
 });

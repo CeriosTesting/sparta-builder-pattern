@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+  <person>
+    <uuid>123e4567-e89b-12d3-a456-426614174000</uuid>
+    <firstName>Logan</firstName>
+    <lastName>Veth</lastName>
+    <gender>male</gender>
+    <dateOfBirth>1990-04-15T00:00:00.000Z</dateOfBirth>
+    <isActive>true</isActive>
+    <address>
+      <street>Orteliuslaan</street>
+      <houseNumber>1000</houseNumber>
+      <city>Utrecht</city>
+      <postalCode>3528 BD</postalCode>
+      <countryCode>NL</countryCode>
+    </address>
+    <contacts>
+      <contact>
+        <type>email</type>
+        <value>logan.veth@cerios.com</value>
+        <isVerified>true</isVerified>
+      </contact>
+      <contact>
+        <type>phone</type>
+        <value>+31-612345678</value>
+        <isVerified>false</isVerified>
+      </contact>
+    </contacts>
+    <hobbies>
+      <hobby>Cycling</hobby>
+      <hobby>Painting</hobby>
+      <hobby>Cooking</hobby>
+    </hobbies>
+    <notes>Allergic to peanuts.</notes>
+  </person>
+</persons>

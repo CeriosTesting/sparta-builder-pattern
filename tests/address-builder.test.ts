@@ -11,7 +11,7 @@ test("create Address without builder", async () => {
 		countryCode: "US",
 	};
 
-	console.log(address);
+	console.log(JSON.stringify(address, null, 2));
 });
 
 test("create Address with builder", async () => {
@@ -23,15 +23,15 @@ test("create Address with builder", async () => {
 		.countryCode("US")
 		.build();
 
-	console.log(address);
+	console.log(JSON.stringify(address, null, 2));
 });
 
 test("create Address with builder and defaults", async () => {
 	const address = AddressBuilder.createWithDefaults().build();
-	console.log(address);
+	console.log(JSON.stringify(address, null, 2));
 });
 
 test("create Address with builder and defaults but force the house number", async () => {
 	const address = AddressBuilder.createWithDefaults().houseNumber(9999).build();
-	console.log(address);
+	console.log(JSON.stringify(address, null, 2));
 });

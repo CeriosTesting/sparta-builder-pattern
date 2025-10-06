@@ -44,30 +44,6 @@ export class AddressBuilder {
 		return this;
 	}
 
-	/**
-	 * Builds and returns the final Address object.
-	 *
-	 * This method completes the building process and returns the constructed
-	 * Address object with all the values that were set through the builder methods.
-	 *
-	 * @returns The constructed Address object
-	 *
-	 * @example
-	 * ```typescript
-	 * const address = AddressBuilder.create()
-	 *   .street("Broadway")
-	 *   .houseNumber(1234)
-	 *   .city("New York")
-	 *   .postalCode("10001")
-	 *   .countryCode("US")
-	 *   .build(); // Returns the Address object
-	 * ```
-	 *
-	 * @remarks
-	 * After calling build(), you have a complete Address object that can be used
-	 * in your application. The builder can be reused to create another address
-	 * if needed, but typically you create a new builder instance for each address.
-	 */
 	build(): Address {
 		return this.address;
 	}
