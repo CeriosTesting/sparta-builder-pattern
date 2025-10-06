@@ -104,7 +104,7 @@ static createWithDefaults(): PersonBuilder {
         .uuid(faker.string.uuid())
         .firstName(faker.person.firstName())
         .lastName(faker.person.lastName())
-        .gender(faker.helpers.arrayElement([Gender.Male, Gender.Female, Gender.Other]))
+        .gender(faker.helpers.enumValue(Gender))
         .dateOfBirth(faker.date.birthdate({ min: 18, max: 80, mode: 'age' }))
         .isActive(faker.datatype.boolean())
         .address(AddressBuilder.createWithDefaults().build())
