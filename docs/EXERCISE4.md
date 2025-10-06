@@ -75,4 +75,4 @@ Limits house numbers to 1-42 (perfect for a small street!)
 - ✅ **Variety**: Each test run uses different data, helping catch bugs
 - ✅ **Consistency**: Follows real-world patterns (valid emails, phone numbers, etc.)
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go to the next exercise](./EXERCISE5.md)

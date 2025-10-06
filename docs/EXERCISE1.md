@@ -49,4 +49,4 @@ When writing tests, type safety helps you:
 
 Types are like having a helpful assistant that checks your work and prevents common mistakes!
 
-### [Go back to Exercises](../README.md#exercises)
+### [Go to the next exercise](./EXERCISE2.md)
