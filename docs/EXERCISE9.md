@@ -71,7 +71,11 @@ export class PersonsDirector {
 ### Step 3: Test Age-Based Scenarios
 Add a new test calling this director:
 ```typescript
-PersonsDirector.createRandomPersons({ numberOfPersons: 10, age: { min: 18, max: 65 }, contacts: { min: 1, max: 3 } })`
+const persons = PersonsDirector.createRandomPersons({
+    numberOfPersons: 10,
+	: { minYears: 18, maxYears: 65 },
+	: { min: 1, max: 3 },
+});
 ```
 
 ## Part 2: Create Performance Test Data
@@ -111,20 +115,21 @@ Now for the ultimate test! Create a comprehensive test that generates performanc
 **Create this test in your `persons-director.test.ts`:**
 
 ```typescript
-import { writeFileSync } from "fs";
-import { join } from "path";
+import { writeFileSync } from "node:fs";
+import test from "@playwright/test";
+import { PersonsDirector } from "directors/persons-director";
 
 test("createPerformanceTestData - export all scenarios", async () => {
-    const scenarios = ['light', 'medium', 'heavy', 'extreme'];
+	const scenarios = ["light", "medium", "heavy", "extreme"];
 
-    for (const scenario of scenarios) {
-        const population = PersonsDirector.createPerformanceTestData(scenario);
+	for (const scenario of scenarios) {
+		const population = PersonsDirector.createPerformanceTestData(scenario as "light" | "medium" | "heavy" | "extreme");
 
-        // Export individual scenario data to JSON file
-        const filename = `performance-data-${scenario}.json`;
-        const filepath = join(process.cwd(), filename);
+		// Export individual scenario data to JSON file
+		const filename = `performance-data-${scenario}.json`;
 
-        writeFileSync(filepath, JSON.stringify(population, null, 2));
+		writeFileSync(filename, JSON.stringify(population, null, 2));
+	}
 });
 ```
 
