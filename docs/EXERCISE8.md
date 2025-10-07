@@ -1,4 +1,4 @@
-# Exercise 8 (BONUS): Future-Proof Date Testing - Mastering Time Travel
+# Exercise 8: Future-Proof Date Testing - Mastering Time Travel
 
 ![](../images//exercise8.png)
 
