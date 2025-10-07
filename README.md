@@ -29,7 +29,7 @@ Follow the [installation document](./docs/INSTALLATION.md) before moving on to t
 - [Exercise 5: Build Your Own Builder - Creating the Contact Builder](./docs/EXERCISE5.md)
 - [Exercise 6: The Grand Finale - Creating the Complete Person Builder](./docs/EXERCISE6.md)
 - [Exercise 7: Custom Builder Methods - Making Testing Life Easier](./docs/EXERCISE7.md)
-- [Exercise 8 (BONUS): Future-Proof Date Testing - Mastering Time Travel](./docs/EXERCISE8.md)
+- [Exercise 8: Future-Proof Date Testing - Mastering Time Travel](./docs/EXERCISE8.md)
 - [Exercise 9: The Director Pattern - Orchestrating Massive Data Creation](./docs/EXERCISE9.md)
 
 # Builder Pattern Explanation
