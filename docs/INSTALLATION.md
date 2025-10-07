@@ -5,7 +5,7 @@ This guide will help you set up the Builder Pattern Workshop on your local machi
 ## Prerequisites
 
 ### 1. Node.js
-- **Required Version**: Node.js 18 or higher
+- **Required Version**: Node.js 18 or higher (latest LTS recommended)
 - **Download**: [https://nodejs.org/](https://nodejs.org/)
 - **Verify Installation**:
   ```bash
@@ -103,7 +103,8 @@ After installation, your project structure should look like this:
 sparta-builder-pattern/
 ├── docs/              # Workshop documentation
 ├── images/            # Workshop images
-├── tests/             # Test files and models
+├── tests/             # Test files, models, builders and directors
+│   ├── directors/     # Director classes
 │   ├── builders/      # Builder classes
 │   ├── enums/         # TypeScript enums
 │   └── models/        # Data models
@@ -112,8 +113,11 @@ sparta-builder-pattern/
 └── test-results/      # Test artifacts (created after running tests)
 ```
 
-## Ready to Start!
+## Doing this installation for the workshop in the future?
+Hold your horses! You first need an explanation about the workshop. Store your laptop safely...
+
+## Is it workshop day?
 Once everything is installed and verified, you're ready to begin the workshop! Start with [Exercise 1](EXERCISE1.md).
 
 ## Need Help?
-Ask the trainer ;)
+Ask the trainer or make use of AI? =P
