@@ -1,6 +1,6 @@
 import { writeFileSync } from "node:fs";
 import test from "@playwright/test";
-import { PersonsDirector } from "directors/persons-director";
+import { PersonsDirector } from "tests/directors/persons-director";
 
 test("create random persons", async () => {
 	const persons = PersonsDirector.createRandomPersons({
