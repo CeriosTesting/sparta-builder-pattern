@@ -31,6 +31,7 @@ Follow the [installation document](./docs/INSTALLATION.md) before moving on to t
 - [Exercise 7: Custom Builder Methods - Making Testing Life Easier](./docs/EXERCISE7.md)
 - [Exercise 8: Future-Proof Date Testing - Mastering Time Travel](./docs/EXERCISE8.md)
 - [Exercise 9: The Director Pattern - Orchestrating Massive Data Creation](./docs/EXERCISE9.md)
+- [Exercise 10: Create Your Own Domain - Master Challenge](./docs/EXERCISE10.md)
 
 # Builder Pattern Explanation
 If you want to read more about the builder pattern in a schematic way. [Click here](./docs/BUILDER_EXPLANATION.md)
