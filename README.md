@@ -22,7 +22,7 @@ Follow the [installation document](./docs/INSTALLATION.md) before moving on to t
 
 # Exercises
 
-- [Exercise 1: Understanding Type Safety - The Difference Between Flexible and Strict Code](./docs/EXERCISE1.md.md)
+- [Exercise 1: Understanding Type Safety - The Difference Between Flexible and Strict Code](./docs/EXERCISE1.md)
 - [Exercise 2: Create Missing Types - Building Your Own Blueprints](./docs/EXERCISE2.md)
 - [Exercise 3: The first builder, the Address builder, let's run!](./docs/EXERCISE3.md)
 - [Exercise 4: Fix Postal Code Format & Explore Fake Data Magic](./docs/EXERCISE4.md)
