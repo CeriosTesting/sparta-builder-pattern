@@ -1,38 +1,49 @@
-# Exercise 10: Create Your Own Domain - Master Challenge
+# Exercise 10: Use the `@cerios/cerios-builder` Package
 
-**Final Project!** Apply everything you've learned to build a complete Builder Pattern system for your own domain.
+You’ve built custom builders in this workshop.
+Now let’s try an external package approach with **type-safe required fields**.
 
-## Your Mission
+Package: [@cerios/cerios-builder](https://www.npmjs.com/package/@cerios/cerios-builder)
 
-Choose any domain that interests you (gaming, e-commerce, healthcare, music, etc.) and create a complete Builder ecosystem.
+---
 
-## Requirements
+## Goal
 
-### Part 1: Design Your Data Model
-1. **Create complex JSON** with at least 3 levels of nesting
-2. **Include arrays** of nested objects
-3. **Use multiple data types** (string, number, boolean, Date, enums)
-4. **Model your types** starting from the deepest level working up
+- Use a package-based builder with **TypeScript type safety**
+- Verify that **required fields must be set before build**
 
-### Part 2: Build Your Builders
-1. **Create builders** for all complex types
-2. **Implement** `create()` and `createWithDefaults()` methods
-3. **Add custom methods** that solve real testing scenarios
-4. **Write comprehensive tests** for each builder
+---
 
-### Part 3: Create Your Director
-1. **Build a Director class** that orchestrates mass data creation
-2. **Create different scenarios**
-3. **Export test data** to JSON files for analysis
+## Part 1: Install the package
 
-## Success Criteria
-- [ ] Complete type system with proper organization
-- [ ] Working builders with realistic fake data
-- [ ] Custom methods that add real value
-- [ ] Director that generates bulk test data
-- [ ] All tests passing
-- [ ] Clean, well-structured code
+Run:
 
-**Prove you've mastered the Builder Pattern!** Use the patterns from previous exercises as your guide.
+```bash
+npm i -D @cerios/cerios-builder
+```
 
-### [Go back to Home](../README.md)
+---
+
+## Part 2: Create a small demo test
+
+- Open the package page and README: [@cerios/cerios-builder](https://www.npmjs.com/package/@cerios/cerios-builder)
+- Read through the documentation and **try all TypeScript type-based examples** from the README
+- Recreate those examples in a local test file, for example: `tests/bonus-cerios-builder.test.ts`
+- For each example, verify the behavior in your editor (TypeScript checks) and by running tests where applicable
+
+### Mandatory check (most important)
+
+When using the **type version** of the builder:
+
+- `build()` must only succeed when **all required fields of the type** are set via the builder
+- If one required field is missing, `build()` should be blocked by TypeScript (compile-time)
+- Add one explicit "missing required field" attempt to confirm this behavior
+
+---
+
+## Done
+
+If this works, you now have a clean demo showing how `@cerios/cerios-builder` helps enforce required fields with TypeScript types.
+That is exactly the kind of reliability we want in test-data creation.
+
+### [Go to the next exercise](./EXERCISE11.md)
